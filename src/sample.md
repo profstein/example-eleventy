@@ -1,6 +1,6 @@
 ---
 title: Sample page
-layout: base.njk
+layout: base
 tags: navItem
 pageClass: sample
 ---
