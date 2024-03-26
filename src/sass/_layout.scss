@@ -1,4 +1,38 @@
 /* ================= ===========================
   ADD YOUR LAYOUT CSS HERE
   ================================================ */
-//This is not necessary. Opinionated to remove default margin from body to allow things to go all the way across the screen.
+
+/* constrain main max width */
+
+/* mobile is OK with minimal spacing */
+main{
+  padding: 5px;
+}
+
+@media screen and (min-width: 600px){
+  main{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (min-width: 900px){
+  main{ 
+    max-width: 850px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  main{
+    max-width: 1000px;
+  }
+}
+
+footer{
+  border-top: 1px solid #555;
+  padding-top: 1rem;
+  text-align: center;
+}
