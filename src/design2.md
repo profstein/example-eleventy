@@ -7,3 +7,5 @@ tags:
 pageClass: design
 ---
 {{title}}
+
+{% include "next-back-design.njk" %}

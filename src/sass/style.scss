@@ -12,4 +12,13 @@
   ADD YOUR CSS HERE 
   ================================================ */
 
+body{
+  color: white;
+}
 
+
+/* next and back buttons */
+.next-back{
+  display: flex;
+  justify-content: space-between;
+}

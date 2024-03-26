@@ -1,0 +1,19 @@
+{% set currentIndex = -1 %}
+{% for item in collections.design %}
+  {% if item.url === page.url %}
+    {% set currentIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% set prevItem = collections.design[currentIndex - 1] %}
+{% set nextItem = collections.design[currentIndex + 1] %}
+
+<div class="next-back">
+  {% if prevItem %}
+    <div class="back"> <a href="{{ prevItem.url }}">← Back</a></div>
+  {% endif %}
+  
+  {% if nextItem %}
+    <div class="net"><a href="{{ nextItem.url }}">Next →</a></div>
+  {% endif %}
+</div>
