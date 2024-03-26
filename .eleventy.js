@@ -8,12 +8,21 @@ module.exports = function(eleventyConfig) {
     
     eleventyConfig.addLayoutAlias('base', 'base.njk');
 
+    // Add a collection for portfolio items
+  eleventyConfig.addCollection("portfolio", function(collectionApi) {
+    // Return the items sorted by date or any other property
+    return collectionApi.getFilteredByGlob("src/portfolio/**/*.md").sort(function(a, b) {
+      return a.date - b.date;
+    });
+  });
+
     // Return your Object options:
     return {
       markdownTemplateEngine: 'njk',
       dir: {
         input: "src",
-        output: "public"
+        output: "public",
+        includes: "_includes"
       }
     }
 };
